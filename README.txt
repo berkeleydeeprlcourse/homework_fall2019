@@ -27,8 +27,9 @@ export LD_LIBRARY_PATH = ~/.mujoco/mjpro150/bin/
 a) [PREFERRED] Option A:
 
 i) install anaconda, if you don't already have it:
-$ cd cd285
-$ bash Anaconda2-5.2.0-Linux-x86_64.sh
+Download Anaconda2 (suggested v5.2 for linux): https://www.continuum.io/downloads
+$ cd Downloads
+$ bash Anaconda2-5.2.0-Linux-x86_64.sh #file name might be slightly different, but follows this format
 
 Note that this install will modify the PATH variable in your bashrc.
 You need to open a new terminal for that path change to take place (to be able to find 'conda' in the next step).
