@@ -1,6 +1,5 @@
 import os
 from tensorboardX import SummaryWriter
-import matplotlib.pyplot as plt
 import numpy as np
 
 class Logger:
