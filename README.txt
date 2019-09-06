@@ -15,7 +15,7 @@ $ cd <this_repo>/downloads
 $ cp -r mjpro150 ~/.mujoco/
 
 add the following to bottom of your bashrc:
-export LD_LIBRARY_PATH = ~/.mujoco/mjpro150/bin/
+export LD_LIBRARY_PATH=~/.mujoco/mjpro150/bin/
 
 ##############################################
 ##############################################
