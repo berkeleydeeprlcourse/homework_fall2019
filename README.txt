@@ -17,6 +17,10 @@ $ cp -r mjpro150 ~/.mujoco/
 add the following to bottom of your bashrc:
 export LD_LIBRARY_PATH=~/.mujoco/mjpro150/bin/
 
+NOTE IF YOU'RE USING A MAC:
+The provided mjpro150 folder is for Linux. 
+Please download the OSX version yourself, from https://www.roboti.us/index.html
+
 ##############################################
 ##############################################
 
