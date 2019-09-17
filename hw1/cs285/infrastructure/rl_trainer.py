@@ -109,7 +109,7 @@ class RL_Trainer(object):
             # collect trajectories, to be used for training
             training_returns = self.collect_training_trajectories(itr,
                                 initial_expertdata, collect_policy,
-                                self.params['batch_size_initial'], self.params['batch_size']) ## TODO implement this function below
+                                self.params['batch_size']) ## TODO implement this function below
             paths, envsteps_this_batch, train_video_paths = training_returns
             self.total_envsteps += envsteps_this_batch
 
@@ -169,7 +169,7 @@ class RL_Trainer(object):
         if self.log_video:
             print('\nCollecting train rollouts to be used for saving videos...')
             ## TODO look in utils and implement sample_n_trajectories
-            train_video_paths = sample_n_trajectories(self.env, collect_policy_use, MAX_NVIDEO, MAX_VIDEO_LEN, True)
+            train_video_paths = sample_n_trajectories(self.env, collect_policy, MAX_NVIDEO, MAX_VIDEO_LEN, True)
 
         return paths, envsteps_this_batch, train_video_paths
 

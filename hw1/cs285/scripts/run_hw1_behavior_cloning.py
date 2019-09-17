@@ -65,7 +65,6 @@ def main():
     parser.add_argument('--num_agent_train_steps_per_iter', type=int, default=1000)  # number of gradient steps for training policy (per iter in n_iter)
     parser.add_argument('--n_iter', '-n', type=int, default=1)
 
-    parser.add_argument('--batch_size_initial', type=int, default=20000)  # training data collected (in the env) during 1st iteration
     parser.add_argument('--batch_size', type=int, default=1000)  # training data collected (in the env) during each iteration
     parser.add_argument('--eval_batch_size', type=int,
                         default=200)  # eval data collected (in the env) for logging metrics
