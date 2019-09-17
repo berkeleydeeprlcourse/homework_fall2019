@@ -55,27 +55,3 @@ $ tensorboard --logdir .
 
 Then, navigate to shown url to see scalar summaries as plots (in 'scalar' tab), as well as videos (in 'images' tab)
 
-
-##############################################
-##############################################
-##############################################
-##############################################
-##############################################
-##############################################
-##############################################
-
-anusha to do:
-	- take a hw1 template from online, fill it in using my answerkey
-		-make sure it runs on dagger for ant
-		-save the result as hw1_soln + push this
-	- then fill in hw2 (by copying stuff from hw1_soln or the answerkey, as appropriate)
-		-make sure it runs on cartpole + inverted pendulum
-
-frederik to do:
-	- pdf
-	- autograder
-
-
-avi to do:
-	- fill out hw2 (using hw1_soln for help)
-	- give full feedback (pdf, comments/readme, code)
