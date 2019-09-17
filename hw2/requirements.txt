@@ -1,0 +1,8 @@
+gym==0.10.11
+tensorflow==1.12.0
+mujoco-py==1.50.1.35
+tensorflow-probability==0.5.0
+tensorboardX==1.8
+matplotlib==2.2.2
+ipython==6.4.0
+moviepy==1.0.0
