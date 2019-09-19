@@ -25,6 +25,7 @@ class MLPPolicy(BasePolicy):
         self.ac_dim = ac_dim
         self.ob_dim = ob_dim
         self.n_layers = n_layers
+        self.discrete = discrete
         self.size = size
         self.learning_rate = learning_rate
         self.training = training
