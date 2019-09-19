@@ -64,7 +64,6 @@ def main():
     parser.add_argument('--dont_standardize_advantages', '-dsa', action='store_true')
     parser.add_argument('--batch_size', '-b', type=int, default=1000) #steps collected per train iteration
     parser.add_argument('--eval_batch_size', '-eb', type=int, default=400) #steps collected per eval iteration
-    parser.add_argument('--train_batch_size', '-tb', type=int, default=1000) ##steps used per gradient step
 
     parser.add_argument('--num_agent_train_steps_per_iter', type=int, default=1)
     parser.add_argument('--discount', type=float, default=1.0)
@@ -85,6 +84,10 @@ def main():
 
     # convert to dictionary
     params = vars(args)
+    
+    # for this assignment, we train on everything we recently collected
+    # so making train_batch_size=batch_size 
+    params['train_batch_size']=params['batch_size']
 
     ##################################
     ### CREATE DIRECTORY FOR LOGGING
