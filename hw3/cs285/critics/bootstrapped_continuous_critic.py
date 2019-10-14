@@ -35,7 +35,7 @@ class BootstrappedContinuousCritic(BaseCritic):
             is None
 
             ----------------------------------------------------------------------------------
-            loss: a function of self.sy_logprob_n and self.sy_adv_n that we will differentiate
+            loss: a function of self.sy_ob_no, self.sy_ac_na and self.sy_adv_n that we will differentiate
                 to get the policy gradient.
         """
         self.sy_ob_no, self.sy_ac_na, self.sy_adv_n = self.define_placeholders()
