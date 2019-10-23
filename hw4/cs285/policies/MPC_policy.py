@@ -56,7 +56,7 @@ class MPCPolicy(BasePolicy):
             # states for each dynamics model in your ensemble
 
             # once you have a sequence of predicted states from each model in your
-            # ensemble, calculate the reward for each sequence using self.env.get_reward(predicted_obs)
+            # ensemble, calculate the reward for each sequence using self.env.get_reward (See files in envs to see how to call this)
 
         # calculate mean_across_ensembles(predicted rewards).
         # the matrix dimensions should change as follows: [ens,N] --> N
