@@ -601,7 +601,6 @@ def main():
         max_episode_steps=1000,
     )
     from cs285.sparse_half_cheetah import HalfCheetahEnv
-    import pdb; pdb.set_trace()
 
     import argparse
     parser = argparse.ArgumentParser()
