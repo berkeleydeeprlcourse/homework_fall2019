@@ -18,7 +18,7 @@ add the following to bottom of your bashrc:
 export LD_LIBRARY_PATH=~/.mujoco/mjpro150/bin/
 
 NOTE IF YOU'RE USING A MAC:
-The provided mjpro150 folder is for Linux. 
+The provided mjpro150 folder is for Linux.
 Please download the OSX version yourself, from https://www.roboti.us/index.html
 
 ##############################################
@@ -57,6 +57,10 @@ Note: This conda environment requires activating it every time you open a new te
 
 b) Option B:
 
+install mujoco locally
+$ wget https://github.com/openai/mujoco-py/archive/1.50.1.1.zip && unzip mujoco-py-1.50.1.1.zip
+$ cd mujoco-py-1.50.1.1 && pip3 install -e .
+
 install dependencies locally, by running:
 $ pip install -r requirements.txt
 
@@ -80,7 +84,7 @@ See the code + the hw pdf for more details.
 ##############################################
 ##############################################
 
-5) run code: 
+5) run code:
 
 Run the following command for Section 1 (Behavior Cloning):
 
