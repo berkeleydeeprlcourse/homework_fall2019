@@ -1,7 +1,3 @@
-<string>:1: SyntaxWarning: assertion is always true, perhaps remove parentheses?
-<string>:1: SyntaxWarning: assertion is always true, perhaps remove parentheses?
-<string>:1: SyntaxWarning: assertion is always true, perhaps remove parentheses?
-<string>:1: SyntaxWarning: assertion is always true, perhaps remove parentheses?
 import numpy as np
 import tensorflow as tf
 from .base_policy import BasePolicy
@@ -133,11 +129,13 @@ class MLPPolicySL(MLPPolicy):
         # TODO define the loss that will be used to train this policy
         # HINT1: remember that we are doing supervised learning
         # HINT2: use tf.losses.mean_squared_error
-        self.loss = TODO
+        self.loss = tf.losses.mean_square_error(true_actions, predicted_actions)
         self.train_op = tf.train.AdamOptimizer(
             self.learning_rate).minimize(self.loss)
 
     def update(self, observations, actions):
         assert(self.training, 'Policy must be created with training=True in order to perform training updates...')
-        self.sess.run(self.train_op, feed_dict={
+        acc, loss = self.sess.run([self.train_op, self.loss], feed_dict={
                       self.observations_pl: observations, self.acs_labels_na: actions})
+
+        print(f'loss: {loss}\t acc: {acc}')
