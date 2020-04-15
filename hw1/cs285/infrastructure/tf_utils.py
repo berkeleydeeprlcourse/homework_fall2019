@@ -20,7 +20,7 @@ def build_mlp(input_placeholder, output_size, scope, n_layers, size, activation=
             output_size: size of the output layer
             output_activation: activation of the output layer
 
-        returns:
+        returns
             output_placeholder: the result of a forward pass through the hidden layers + the output layer
     """
     output_placeholder = input_placeholder
