@@ -84,13 +84,13 @@ def sample_n_trajectories(env, policy, ntraj, max_path_length, render=False, ren
         Collect ntraj rollouts.
 
         TODO implement this function
-        Hint1: use sample_trajectory to get each path (i.e. rollout) that goes into paths
+        Hint1: use sample_trajectory to get each path
+        (i.e. rollout) that goes into paths
     """
-    paths = []
 
-    TODO
 
-    return paths
+return [sample_trajectory(env, policy, max_path_length) for _ in range(ntraj)]
+
 
 ############################################
 ############################################
