@@ -88,8 +88,10 @@ def sample_n_trajectories(env, policy, ntraj, max_path_length, render=False, ren
         (i.e. rollout) that goes into paths
     """
 
-
-return [sample_trajectory(env, policy, max_path_length) for _ in range(ntraj)]
+    return [
+        sample_trajectory(env, policy, max_path_length)
+        for _ in range(ntraj)
+    ]
 
 
 ############################################
