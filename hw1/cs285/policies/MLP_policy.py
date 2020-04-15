@@ -1,8 +1,8 @@
-import numpy as np
-import tensorflow as tf
-from .base_policy import BasePolicy
-from cs285.infrastructure.tf_utils import build_mlp
 import tensorflow_probability as tfp
+from cs285.infrastructure.tf_utils import build_mlp
+from .base_policy import BasePolicy
+import tensorflow as tf
+import numpy as np
 
 
 class MLPPolicy(BasePolicy):
@@ -57,7 +57,10 @@ class MLPPolicy(BasePolicy):
     def define_forward_pass(self):
         # TODO implement this build_mlp function in tf_utils
         mean = build_mlp(self.observations_pl, output_size=self.ac_dim,
-                         scope='continuous_logits', n_layers=self.n_layers, size=self.size)
+                         activation=tf.relu,
+                         scope='continuous_logits',
+                         n_layers=self.n_layers,
+                         size=self.size)
         logstd = tf.Variable(tf.zeros(self.ac_dim), name='logstd')
         self.parameters = (mean, logstd)
 
@@ -138,7 +141,7 @@ class MLPPolicySL(MLPPolicy):
             self.learning_rate).minimize(self.loss)
 
     def update(self, observations, actions):
-        assert(self.training, 'Policy must be created with training=True in order to perform training updates...')
+        assert self.training, 'Policy must be created with training=True in order to perform training updates...'
         acc, loss = self.sess.run([self.train_op, self.loss], feed_dict={
             self.observations_pl: observations, self.acs_labels_na: actions})
 
