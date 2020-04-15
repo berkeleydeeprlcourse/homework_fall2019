@@ -57,7 +57,7 @@ class MLPPolicy(BasePolicy):
     def define_forward_pass(self):
         # TODO implement this build_mlp function in tf_utils
         mean = build_mlp(self.observations_pl, output_size=self.ac_dim,
-                         activation=tf.nn.relu,
+                         activation=tf.tanh,
                          scope='continuous_logits',
                          n_layers=self.n_layers,
                          size=self.size)

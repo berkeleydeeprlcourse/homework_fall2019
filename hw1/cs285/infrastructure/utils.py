@@ -89,7 +89,8 @@ def sample_n_trajectories(env, policy, ntraj, max_path_length, render=False, ren
     """
 
     return [
-        sample_trajectory(env, policy, max_path_length)
+        sample_trajectory(env, policy, max_path_length,
+                          render=render, render_mode=render_mode)
         for _ in range(ntraj)
     ]
 
