@@ -4,5 +4,5 @@ mujoco-py==1.50.1.35
 tensorflow-probability==0.5.0
 tensorboardX==1.8
 matplotlib==2.2.2
-ipython==6.4.0
+ipython==7.16.3
 moviepy==1.0.0
